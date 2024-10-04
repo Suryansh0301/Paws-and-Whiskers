@@ -1,0 +1,88 @@
+body,
+html {
+  margin: 0%;
+  padding: 0%;
+}
+
+body {
+  font-family: 'Source Sans 3', sans-serif;
+}
+
+.top-section-wrapper {
+  background-color: #001D37;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.top-section {
+
+  color: white;
+  padding-top: 139px;
+  padding-bottom: 139px;
+  max-width: 1066px;
+  margin: 0 auto;
+}
+
+/* look inside the top-section and look for h1 */
+.top-section h1 {
+  font-size: 6.25rem;
+  margin: 0;
+  line-height: 97.3%;
+  max-width: 32.8125rem;
+}
+
+.intro-text {
+  max-width: 27.185rem;
+  font-size: 1.25rem;
+  line-height: 169.3%;
+  margin: 1rem 0;
+}
+
+.intro-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  /* 4 fr represent kar rahe humme ek line mein kitne columns chahiye fr stands for fraction sabka yaha 1 fr hona indicate karta hain humaari given width ko equal space mein cut karna */
+  column-gap: 16px;
+  /* spacing between columns*/
+}
+
+.intro-feature {
+  border: rgba(255, 255, 255, 0.24) solid 1px;
+  padding: 33px 25px;
+}
+
+.intro-feature p {
+  margin: 0;
+  font-size: 1.0625rem;
+
+}
+
+.our-btn {
+  /* 
+    anchor elements inline hote hain jo margin hain usko puch karna hota hain kisi
+    against but voh inline elements ke against ni kar skta toh voh issliye usse block
+    mein convert kara jaata hain  
+  */
+  display: inline-block;
+  font-size: 1.125rem;
+  font-weight: 600;
+  background-color: #475AFF;
+  color: white;
+  padding: 13px 25px;
+  text-decoration: none;
+  border-radius: 100px;
+
+}
+
+.manage-btn {
+  background-color: #001D37;
+  border: white solid 2px;
+}
+
+.utility-mr {
+  margin-right: 10px;
+}
+
+.intro-buttons {
+  margin-bottom: 129px;
+}
