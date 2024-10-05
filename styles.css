@@ -9,13 +9,14 @@ body {
 }
 
 .top-section-wrapper {
+  overflow: hidden;
   background-color: #001D37;
   padding-left: 16px;
   padding-right: 16px;
 }
 
 .top-section {
-
+  position: relative;
   color: white;
   padding-top: 139px;
   padding-bottom: 139px;
@@ -25,6 +26,7 @@ body {
 
 /* look inside the top-section and look for h1 */
 .top-section h1 {
+
   font-size: 6.25rem;
   margin: 0;
   line-height: 97.3%;
@@ -39,6 +41,7 @@ body {
 }
 
 .intro-features {
+
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   /* 4 fr represent kar rahe humme ek line mein kitne columns chahiye fr stands for fraction sabka yaha 1 fr hona indicate karta hain humaari given width ko equal space mein cut karna */
@@ -47,6 +50,7 @@ body {
 }
 
 .intro-feature {
+
   border: rgba(255, 255, 255, 0.24) solid 1px;
   padding: 33px 25px;
 }
@@ -67,6 +71,7 @@ body {
   font-size: 1.125rem;
   font-weight: 600;
   background-color: #475AFF;
+  border: #475AFF solid 2px;
   color: white;
   padding: 13px 25px;
   text-decoration: none;
@@ -85,4 +90,35 @@ body {
 
 .intro-buttons {
   margin-bottom: 129px;
+}
+
+.intro-feature h2 {
+  margin: 35px 0px 4px 0px;
+  font-size: 1.5rem;
+  line-height: 97.3%;
+}
+
+.circle {
+  height: 38.5625rem;
+  width: 38.5625rem;
+  background-color: rgba(214, 96, 255, 0.85);
+  border-radius: 38.5625rem;
+  filter: blur(150px);
+  /* absolute reference leta hain nearest ancestor ka */
+  position: absolute;
+  top: 62px;
+  right: -390px;
+
+}
+
+.blue-circle {
+  background-color: #6079FF;
+
+  left: 67px;
+  top: -360px;
+}
+
+.top-content {
+  z-index: 5;
+  position: relative;
 }
