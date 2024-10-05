@@ -166,6 +166,7 @@ footer {
 .list-of-pets {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  row-gap: 28px;
   column-gap: 34px;
 }
 
@@ -186,5 +187,36 @@ footer {
 
 .pet-card-photo img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* 
+    agar description bada hota hain kisi pet ka  
+    toh photo apne aap adjust hojaayegi without 
+    leaving any white spaces 
+  */
   display: block;
+}
+
+.pet-card-text {
+  padding-top: 21px;
+  padding-left: 29px;
+  padding-right: 38px;
+}
+
+.pet-card-text h3 {
+  font-size: 1.625rem;
+  font-weight: 600;
+  margin: 0 0 13px 0;
+}
+
+.pet-description {
+  line-height: 150%;
+  margin: 0 0 1rem 0;
+  color: #626262;
+}
+
+.pet-age {
+  font-size: 0.85rem;
+  color: #A2A2A2;
+  margin: 0;
 }
