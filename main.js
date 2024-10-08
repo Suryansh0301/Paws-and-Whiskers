@@ -4,6 +4,19 @@ async function start() {
   const ourTemperature = weatherData.properties.periods[0].temperature
   document.querySelector("#temperature-output").textContent = ourTemperature
 }
-
 start()
 
+async function petsArea() {
+  const petsPromise = await fetch("https://learnwebcode.github.io/bootcamp-pet-data/pets.json")
+  const petsData = await petsPromise.json()
+
+  petsData.forEach((element) => {
+
+    console.log(element.name);
+
+
+  });
+
+
+}
+petsArea()
