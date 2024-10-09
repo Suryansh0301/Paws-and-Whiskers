@@ -17,12 +17,17 @@ async function petsArea() {
 
   petsData.forEach((element) => {
     const clone = template.content.cloneNode(true)
+
+    clone.querySelector(".pet-card").dataset.species = element.species
     clone.querySelector("h3").textContent = element.name
     clone.querySelector(".pet-description").textContent = element.description
     clone.querySelector(".pet-age").textContent = createAgeText(element.birthYear)
 
     if (!element.photo) {
-      element.photo = "images/fallback.jpg"
+      if (element.species == "cat")
+        element.photo = "images/cat_fallback_image.png"
+      else
+        element.photo = "images/dog_fallback_image.png"
     }
 
     clone.querySelector(".pet-card-photo img").src = element.photo
@@ -65,4 +70,14 @@ function handleButtonClick(event) {
   event.target.classList.add("active")
 
   //actually filter the pets below
+
+  const currentFilter = event.target.dataset.filter
+  document.querySelectorAll(".pet-card").forEach((element) => {
+    if (currentFilter == element.dataset.species || currentFilter == "all"
+    ) {
+      element.style.display = "grid"
+    } else {
+      element.style.display = "none"
+    }
+  })
 }
